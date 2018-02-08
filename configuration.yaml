@@ -1,0 +1,74 @@
+homeassistant:
+  
+  name: Home
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  elevation: !secret home_elevation
+  time_zone: !secret home_time_zone
+  
+  unit_system: imperial # metric or imperial
+  customize: !include customize.yaml
+
+
+frontend:
+
+config:
+
+http:
+  
+  # api_password: !secret http_password
+  # base_url: example.duckdns.org:8123
+
+updater:
+
+  include_used_components: Discover
+
+discovery:
+
+conversation:
+
+history:
+
+logbook:
+
+sun:
+
+sensor:
+
+  - platform: yr
+
+  - platform: ups
+    username: !secret ups_username
+    password: !secret ups_password
+
+  - platform: fedex
+    username: !secret fedex_username
+    password: !secret fedex_password
+
+tts:
+
+  - platform: google
+
+usps:
+
+  username: !secret usps_username
+  password: !secret usps_password
+
+device_tracker:
+
+  - platform: netgear
+    host: 192.168.1.1
+    username: !secret router_username
+    password: !secret router_password
+    new_device_defaults:
+        track_new_devices: True
+        hide_if_away: False
+
+zwave:
+
+  usb_path: /dev/ttyACM0
+  network_key: !secret zwave_network_key
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
