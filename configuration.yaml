@@ -9,7 +9,6 @@ homeassistant:
   unit_system: imperial # metric or imperial
   customize: !include customize.yaml
 
-
 frontend:
 
 config:
@@ -20,8 +19,6 @@ http:
   # base_url: example.duckdns.org:8123
 
 updater:
-
-  include_used_components: Discover
 
 discovery:
 
