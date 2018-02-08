@@ -29,7 +29,7 @@ history:
 logbook:
 
 sun:
-
+  
 sensor:
 
   - platform: yr
