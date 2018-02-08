@@ -1,5 +1,7 @@
 *
 !*.yaml
+!*.sh
 !.gitignore
+!scripts/
 secrets.yaml
 known_devices.yaml
