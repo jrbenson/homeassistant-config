@@ -51,6 +51,24 @@ usps:
   username: !secret usps_username
   password: !secret usps_password
 
+neato:
+
+  username: !secret neato_username
+  password: !secret neato_password
+
+amcrest:
+  - host: 192.168.1.10
+    username: !secret amcrest_username
+    password: !secret amcrest_password
+    sensors:
+      - motion_detector
+  - host: 192.168.1.12
+    username: !secret amcrest_username
+    password: !secret amcrest_password
+    sensors:
+      - motion_detector
+
+
 device_tracker:
 
   - platform: netgear
